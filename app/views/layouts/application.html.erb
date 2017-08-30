@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <title>Realestate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-
+  <!-- Header Starts -->
+  <div class="navbar-wrapper">
+    <div class="navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Nav Starts -->
+        <div class="navbar-collapse  collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><%= link_to "Home", root_path %></li></li>
+            <li><%= link_to "Sobre", sobre_path %></li>
+            <li><%= link_to "Contato", contato_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #Nav Ends -->
+  <!-- Header Starts -->
+  <div class="container">
+    <div class="header">
+      <%= image_tag "logo.jpg" %>
+    </div>
+  </div>
+  <!-- #Header Starts -->
 <%= yield %>
 
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <h4>Informação</h4>
+        <ul class="row">
+          <li class="col-lg-6 col-sm-6 col-xs-6"><%= link_to "Sobre", sobre_path %></li>
+          <li class="col-lg-6 col-sm-6 col-xs-6"><%= link_to "Contato", contato_path %></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <h4>Redes Sociais</h4>
+        <%= image_tag "facebook.png", alt: "Facebook" %>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <h4>Quem somos</h4>
+        <p><b>Imobiliária J. Alves</b><br>
+        <%= fa_icon "map-marker" %> Rua Santos Dumont, 226 <br>
+        <%= fa_icon "envelope-o" %> hello@bootstrapreal.com<br>
+        <%= fa_icon "whatsapp" %> (123) 456-7890</p>
+      </div>
+    </div>
+    <p align="center" class="copyright">Copyright 2017. All rights reserved.	</p>
+  </div>
+</div>
 </body>
 </html>
