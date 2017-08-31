@@ -1,20 +1,31 @@
-<%= form_for(@estate) do |f| %>
-  <% if @estate.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@estate.errors.count, "error") %> prohibited this estate from being saved:</h2>
+<div class="container">
 
-      <ul>
+  <%= form_for(@estate) do |f| %>
+  <% if @estate.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@estate.errors.count, "error") %> prohibited this estate from being saved:</h2>
+
+    <ul>
       <% @estate.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :kind %><br>
-    <%= f.text_field :kind %>
+    <%= f.label :kind_id %>
+    <%= f.collection_select(
+    :kind_id,
+    Kind.all,
+    :id,
+    :variety,
+    { include_blank: "Please select one" },
+    { class: "form-control"}
+    ) %>
   </div>
+
   <div class="field">
     <%= f.label :street %><br>
     <%= f.text_field :street %>
@@ -54,4 +65,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+  <% end %>
+</div>
