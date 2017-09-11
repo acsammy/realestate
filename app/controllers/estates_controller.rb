@@ -69,6 +69,6 @@ class EstatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def estate_params
-      params.require(:estate).permit(:kind, :street, :number, :neighborhood, :city, :rooms, :total_construction, :total_area, :description, :price)
+      params.require(:estate).permit(:kind_id, :street, :number, :neighborhood, :city, :rooms, :total_construction, :total_area, :description, :price, :image0, :image1, :image2, :image3, :image4, :image5, :bootsy_image_galery_id)
     end
 end

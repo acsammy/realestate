@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- Header Starts -->
-  <div class="navbar-wrapper">
+  <div class="navbar-wrapper navbar-fixed-top">
     <div class="navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -34,12 +34,19 @@
   <!-- #Nav Ends -->
   <!-- Header Starts -->
   <div class="container">
+    <br>
     <div class="header">
-      <%= image_tag "logo.jpg" %>
+      <%= image_tag "logo.jpg", size: "300x130" %>
     </div>
   </div>
   <!-- #Header Starts -->
+
+
+
 <%= yield %>
+
+
+
 
 <div class="footer">
   <div class="container">

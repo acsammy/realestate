@@ -2,6 +2,7 @@ class CreateEstates < ActiveRecord::Migration
   def change
     create_table :estates do |t|
       t.references :kind
+      t.string :name
       t.string :street
       t.integer :number
       t.string :neighborhood
@@ -11,6 +12,7 @@ class CreateEstates < ActiveRecord::Migration
       t.float :total_area
       t.text :description
       t.float :price
+      t.text :map
 
       t.timestamps null: false
     end

@@ -1,17 +1,17 @@
 <div class="container">
 
-  <%= form_for(@estate) do |f| %>
-  <% if @estate.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@estate.errors.count, "error") %> prohibited this estate from being saved:</h2>
+  <%= form_for @estate, html:{ multipart: true} do |f| %>
+    <% if @estate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estate.errors.count, "error") %> prohibited this estate from being saved:</h2>
 
-    <ul>
-      <% @estate.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
+      <ul>
+        <% @estate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
 
 
   <div class="field">
@@ -21,9 +21,14 @@
     Kind.all,
     :id,
     :variety,
-    { include_blank: "Please select one" },
+    { include_blank: "Selecione..." },
     { class: "form-control"}
     ) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
@@ -54,15 +59,43 @@
     <%= f.label :total_area %><br>
     <%= f.text_field :total_area %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <div class="actions">
+
+  <div class="field">
+    <%= f.label :image0%>
+    <%= f.file_field :image0 %>
+  </div>
+  <div class="field">
+    <%= f.label :image1%>
+    <%= f.file_field :image1 %>
+  </div>
+  <div class="field">
+    <%= f.label :image2%>
+    <%= f.file_field :image2 %>
+  </div>
+  <div class="field">
+    <%= f.label :image3%>
+    <%= f.file_field :image3 %>
+  </div>
+  <div class="field">
+    <%= f.label :image4%>
+    <%= f.file_field :image4 %>
+  </div>
+  <div class="field">
+    <%= f.label :image5%>
+    <%= f.file_field :image5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions pull-right">
     <%= f.submit %>
   </div>
   <% end %>

@@ -11,21 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830204027) do
+ActiveRecord::Schema.define(version: 20170911194206) do
 
   create_table "estates", force: :cascade do |t|
-    t.integer  "kind_id",            limit: 4
-    t.string   "street",             limit: 255
-    t.integer  "number",             limit: 4
-    t.string   "neighborhood",       limit: 255
-    t.string   "city",               limit: 255,   default: "Fama"
-    t.integer  "rooms",              limit: 4,     default: 0
-    t.float    "total_construction", limit: 24
-    t.float    "total_area",         limit: 24
-    t.text     "description",        limit: 65535
-    t.float    "price",              limit: 24
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.integer  "kind_id",             limit: 4
+    t.string   "name",                limit: 255
+    t.string   "street",              limit: 255
+    t.integer  "number",              limit: 4
+    t.string   "neighborhood",        limit: 255
+    t.string   "city",                limit: 255,   default: "Fama"
+    t.integer  "rooms",               limit: 4,     default: 0
+    t.float    "total_construction",  limit: 24
+    t.float    "total_area",          limit: 24
+    t.text     "description",         limit: 65535
+    t.float    "price",               limit: 24
+    t.text     "map",                 limit: 65535
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "image0_file_name",    limit: 255
+    t.string   "image0_content_type", limit: 255
+    t.integer  "image0_file_size",    limit: 4
+    t.datetime "image0_updated_at"
+    t.string   "image1_file_name",    limit: 255
+    t.string   "image1_content_type", limit: 255
+    t.integer  "image1_file_size",    limit: 4
+    t.datetime "image1_updated_at"
+    t.string   "image2_file_name",    limit: 255
+    t.string   "image2_content_type", limit: 255
+    t.integer  "image2_file_size",    limit: 4
+    t.datetime "image2_updated_at"
+    t.string   "image3_file_name",    limit: 255
+    t.string   "image3_content_type", limit: 255
+    t.integer  "image3_file_size",    limit: 4
+    t.datetime "image3_updated_at"
+    t.string   "image4_file_name",    limit: 255
+    t.string   "image4_content_type", limit: 255
+    t.integer  "image4_file_size",    limit: 4
+    t.datetime "image4_updated_at"
+    t.string   "image5_file_name",    limit: 255
+    t.string   "image5_content_type", limit: 255
+    t.integer  "image5_file_size",    limit: 4
+    t.datetime "image5_updated_at"
   end
 
   create_table "kinds", force: :cascade do |t|
