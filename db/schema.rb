@@ -17,17 +17,10 @@ ActiveRecord::Schema.define(version: 20170911194206) do
     t.integer  "kind_id",             limit: 4
     t.string   "name",                limit: 255
     t.string   "street",              limit: 255
-    t.integer  "number",              limit: 4
-    t.string   "neighborhood",        limit: 255
-    t.string   "city",                limit: 255,   default: "Fama"
-    t.integer  "rooms",               limit: 4,     default: 0
-    t.float    "total_construction",  limit: 24
-    t.float    "total_area",          limit: 24
     t.text     "description",         limit: 65535
     t.float    "price",               limit: 24
-    t.text     "map",                 limit: 65535
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "image0_file_name",    limit: 255
     t.string   "image0_content_type", limit: 255
     t.integer  "image0_file_size",    limit: 4

@@ -24,7 +24,8 @@ gem 'cancancan', '~> 2.0'
 gem 'devise'
 # Easy file attachment management for ActiveRecord
 gem 'paperclip', '~> 5.1'
-
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting
+gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 
 
 group :doc do
