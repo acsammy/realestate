@@ -1,8 +1,43 @@
-<div class="inside-banner">
-</div>
 <div class="container">
-  <div class="">
-    <h1>Hi there!</h1>
+  <div class="col-lg-12">
+    <div class="property-images">
+      <!-- Slider Starts -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators hidden-xs">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- Item 0 -->
+          <div class="item active">
+            <%= image_tag "banner1.png"%>
+          </div>
+          <!-- #Item 0 -->
+          <!-- Item 1 -->
+          <div class="item">
+            <%= image_tag "banner2.png"%>
+          </div>
+          <!-- #Item 1 -->
+          <!-- Item 2 -->
+          <div class="item">
+            <%= image_tag "banner3.png"%>
+          </div>
+          <!-- #Item 2 -->
+          <!-- Item 3 -->
+          <div class="item ">
+            <%= image_tag "banner4.png"%>
+          </div>
+          <!-- # Item 3 -->
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= fa_icon "chevron-left" %></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><%= fa_icon "chevron-right" %></a>
+      </div>
+      <!-- #Slider Ends -->
+    </div>
+    <br>
   </div>
   <div class="row">
     <div class="col-xs-6 col-md-6">
