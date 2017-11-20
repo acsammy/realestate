@@ -1,0 +1,32 @@
+<div class="inside-banner">
+  <div class="container">
+    <h2>Mensagens</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <p id="notice"><%= notice %></p>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th >Apagar</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @contacts.each do |contact| %>
+            <tr>
+              <td><%= link_to contact.name, contact %></td>
+              <td><%= contact.created_at.strftime("%d/%m/%Y")%></td>
+              <td><%= link_to 'X', contact, method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </div>
+</div>

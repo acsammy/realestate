@@ -1,0 +1,32 @@
+<div class="inside-banner">
+  <div class="container">
+    <h2>Mensagem de <%= @contact.name %></h2>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-6">
+      <p id="notice"><%= notice %></p>
+
+      <h3>Email</h3>
+      <blockquote>
+        <%= @contact.email %>
+      </blockquote>
+
+      <h3>Telefone</h3>
+      <blockquote>
+        <%= @contact.phone %>
+      </blockquote>
+    </div>
+    <div class="col-6 col-md-6">
+      <br>
+      <h3>Mensagem</h3>
+      <blockquote>
+        <%= @contact.message %>
+      </blockquote>
+      <br>
+      <%= link_to 'Back', contacts_path, class: "btn btn-danger" %>
+      <br><br>
+    </div>
+  </div>
+</div>
