@@ -18,10 +18,10 @@
 
         <tbody>
           <% @contacts.each do |contact| %>
-            <tr>
+            <tr onclick="location.href='<%= contact_path(contact) %>'">
               <td><%= link_to contact.name, contact %></td>
               <td><%= contact.created_at.strftime("%d/%m/%Y")%></td>
-              <td><%= link_to 'X', contact, method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>
+              <td><%= link_to '  X  ', contact, class: "btn btn-danger", method: :delete, data: { confirm: 'Você tem certeza disso?' } %></td>
             </tr>
           <% end %>
         </tbody>

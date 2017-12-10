@@ -6,6 +6,7 @@ class CreateEstates < ActiveRecord::Migration
       t.string :street
       t.text :description
       t.float :price
+      t.byte :flag
 
       t.timestamps null: false
     end

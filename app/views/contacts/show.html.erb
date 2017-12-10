@@ -1,6 +1,6 @@
 <div class="inside-banner">
   <div class="container">
-    <h2>Mensagem de <%= @contact.name %></h2>
+    <h2>Mensagem de <strong><%= @contact.name %></strong></h2>
   </div>
 </div>
 <div class="container">
@@ -25,8 +25,8 @@
         <%= @contact.message %>
       </blockquote>
       <br>
-      <%= link_to 'Back', contacts_path, class: "btn btn-danger" %>
-      <br><br>
     </div>
   </div>
+  <%= link_to 'Voltar', contacts_path, class: "btn btn-danger" %>
+  <br><br>
 </div>

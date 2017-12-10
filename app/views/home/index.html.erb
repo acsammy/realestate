@@ -13,22 +13,22 @@
         <div class="carousel-inner">
           <!-- Item 0 -->
           <div class="item active">
-            <%= image_tag "banner1.png"%>
+            <%= link_to(image_tag("banner1.png"), estates_path)%>
           </div>
           <!-- #Item 0 -->
           <!-- Item 1 -->
           <div class="item">
-            <%= image_tag "banner2.png"%>
+            <%= link_to(image_tag("fama1.jpg"), estates_path)%>
           </div>
           <!-- #Item 1 -->
           <!-- Item 2 -->
           <div class="item">
-            <%= image_tag "banner3.png"%>
+            <%= link_to(image_tag("fama2.jpg"), estates_path)%>
           </div>
           <!-- #Item 2 -->
           <!-- Item 3 -->
           <div class="item ">
-            <%= image_tag "banner4.png"%>
+            <%= link_to(image_tag("fama3.jpg"), estates_path)%>
           </div>
           <!-- # Item 3 -->
         </div>
@@ -37,13 +37,21 @@
       </div>
       <!-- #Slider Ends -->
     </div>
-    <br>
   </div>
   <div class="row">
-    <div class="col-xs-6 col-md-6">
-      <img src="http://corretoramontealegre.com.br/wp-content/uploads/Residencial-Farol-do-Lago-315x200.png" alt="Farol do Lago">
+    <div class="col-xs-4 col-md-6 col-sm-6">
+      <div class="properties-listing spacer">
+        <div id="owl-example" class="owl-carousel">
+          <div class="properties">
+            <div class="image-holder">
+              <%= link_to(image_tag("farol1.png"), faroldolago_path) %>
+            </div>
+            <h4> <%= link_to "Condomínio Farol do Lago", faroldolago_path %></h4>
+          </div>
+        </div>
+      </div>
       <br>
-  </div>
+    </div>
   </div>
 </div>
 <br>

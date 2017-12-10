@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   get "/sobre", to: "home#about"
   get "/contato", to: "contacts#new"
+  get "/faroldolago", to: "home#farol"
   get "/entrar", to: "devise/sessions#new"
 
 end
