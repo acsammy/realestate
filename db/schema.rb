@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20171024172529) do
     t.string   "street",              limit: 255
     t.text     "description",         limit: 65535
     t.float    "price",               limit: 24
+    t.boolean  "flag"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "image0_file_name",    limit: 255
